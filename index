@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varsovia | Literatura y Ensayo</title>
+    
+    <!-- Fuentes tipográficas modernas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Encabezado / Barra de navegación principal -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="brand-logo">Varsovia</a>
+            <p class="brand-tagline">Antología poética, relatos y literatura</p>
+            <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Barra de navegación de categorías / Filtros -->
+    <nav class="category-nav">
+        <div class="nav-container">
+            <button class="filter-btn active" data-filter="all">Ver todo</button>
+            <button class="filter-btn" data-filter="poemas">Poemas</button>
+            <button class="filter-btn" data-filter="relatos">Relatos</button>
+            <button class="filter-btn" data-filter="articulos">Artículos</button>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="content-container">
+        
+        <!-- Columna 1: Poemas -->
+        <section class="category-column" data-category="poemas">
+            <div class="column-header">
+                <h2>Poemas</h2>
+                <span class="badge">09 publicaciones</span>
+            </div>
+            <ul class="article-list">
+                <li><a href="#" class="article-card"><span>Sombra y ceniza</span> <small>3 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>Ecos del Vístula</span> <small>2 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>Invierno en silencio</span> <small>4 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>Geometría del olvido</span> <small>2 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>Navegar la penumbra</span> <small>3 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>Cartas a la noche</span> <small>5 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>Relámpago de mármol</span> <small>2 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>Murmullos en el aire</span> <small>3 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>Último crepúsculo</span> <small>4 min de lectura</small></a></li>
+            </ul>
+        </section>
+
+        <!-- Columna 2: Relatos -->
+        <section class="category-column" data-category="relatos">
+            <div class="column-header">
+                <h2>Relatos</h2>
+                <span class="badge">09 publicaciones</span>
+            </div>
+            <ul class="article-list">
+                <li><a href="#" class="article-card"><span>La casa de los espejos</span> <small>10 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>El relojero de la plaza</span> <small>12 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>Memoria de un manuscrito</span> <small>8 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>Un tranvía bajo la lluvia</span> <small>15 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>La llave de latón</span> <small>7 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>El coleccionista de voces</span> <small>11 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>Sombra en la biblioteca</span> <small>9 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>El cuaderno inacabado</span> <small>14 min de lectura</small></a></li>
+                <li><a href="#" class="article-card"><span>Estación de trenes en niebla</span> <small>6 min de lectura</small></a></li>
+            </ul>
+        </section>
+
+        <!-- Columna 3: Artículos -->
+        <section class="category-column" data-category="articulos">
+            <div class="column-header">
+                <h2>Artículos</h2>
+                <span class="badge">09 publicaciones</span>
+            </div>
+            <ul class="article-list">
+                <li><a href="#" class="article-card"><span>Estética de la brevedad</span> <small>Ensayo</small></a></li>
+                <li><a href="#" class="article-card"><span>La palabra en el tiempo</span> <small>Crítica</small></a></li>
+                <li><a href="#" class="article-card"><span>Arquitectura del poema</span> <small>Análisis</small></a></li>
+                <li><a href="#" class="article-card"><span>Lecturas contemporáneas</span> <small>Reseña</small></a></li>
+                <li><a href="#" class="article-card"><span>Traducción y nostalgia</span> <small>Ensayo</small></a></li>
+                <li><a href="#" class="article-card"><span>El arte de la memoria</span> <small>Filosofía</small></a></li>
+                <li><a href="#" class="article-card"><span>Simbolismo moderno</span> <small>Análisis</small></a></li>
+                <li><a href="#" class="article-card"><span>Ritmo y prosodia libre</span> <small>Taller</small></a></li>
+                <li><a href="#" class="article-card"><span>Escribir en la era digital</span> <small>Reflexión</small></a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Pie de página (Footer) -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>Varsovia</h3>
+                <p>Espacio dedicado a la creación literaria, ensayo y reflexión poética.</p>
+            </div>
+            
+            <div class="footer-nav">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Sobre el proyecto</a></li>
+                    <li><a href="#">Publicaciones</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Suscripción</h4>
+                <p>Recibe los nuevos textos directamente en tu correo.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Unirme</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Varsovia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
