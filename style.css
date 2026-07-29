@@ -1,0 +1,353 @@
+/* ==========================================================================
+   Variables y Configuración del Tema
+   ========================================================================== */
+:root {
+    --bg-primary: #fbf9f6;
+    --bg-surface: #ffffff;
+    --bg-dark: #121212;
+    --text-primary: #1c1b18;
+    --text-muted: #6e6d6a;
+    --accent-color: #2c2c2a;
+    --border-color: #e8e4df;
+    --card-hover-bg: #f4f0ea;
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    
+    --font-title: 'Cormorant Garamond', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Mismo soporte para modo oscuro si se activa */
+[data-theme="dark"] {
+    --bg-primary: #121212;
+    --bg-surface: #1e1e1e;
+    --text-primary: #f0ede6;
+    --text-muted: #a09d96;
+    --accent-color: #e8e4df;
+    --border-color: #2e2d2a;
+    --card-hover-bg: #282724;
+}
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ==========================================================================
+   Encabezado
+   ========================================================================== */
+.main-header {
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-color);
+    padding: 3rem 1.5rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand-logo {
+    font-family: var(--font-title);
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: var(--text-primary);
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.brand-logo:hover {
+    opacity: 0.8;
+}
+
+.brand-tagline {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0.5rem;
+}
+
+.icon-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.icon-btn:hover {
+    background-color: var(--card-hover-bg);
+}
+
+/* ==========================================================================
+   Navegación / Filtros
+   ========================================================================== */
+.category-nav {
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    color: var(--text-primary);
+}
+
+.filter-btn.active {
+    background-color: var(--accent-color);
+    color: var(--bg-primary);
+}
+
+/* ==========================================================================
+   Grid Principal
+   ========================================================================== */
+.content-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    flex: 1;
+}
+
+.category-column {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    transition: var(--transition);
+}
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 2px solid var(--text-primary);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.column-header h2 {
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.badge {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Lista de artículos */
+.article-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.article-card span {
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.article-card small {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+}
+
+.article-card:hover {
+    background-color: var(--card-hover-bg);
+    transform: translateX(4px);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.main-footer {
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+    padding: 4rem 1.5rem 2rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-brand h3 {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.footer-brand p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.footer-nav h4, .footer-newsletter h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-nav a:hover {
+    color: var(--text-primary);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+}
+
+.newsletter-form button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-color);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.newsletter-form button:hover {
+    opacity: 0.9;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Diseño Responsivo (Móviles y Tablets)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .content-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .brand-logo {
+        font-size: 3rem;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+}
