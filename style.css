@@ -36,6 +36,11 @@
     padding: 0;
 }
 
+/* Ajuste para navegación con anclas */
+article {
+    scroll-margin-top: 100px; 
+}
+
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
